@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import { Facebook, Twitter, Instagram, Youtube } from 'lucide-react'
 import Image from 'next/image'
-import CardLogo from '@/app/assets/logos/Group.png'
 
 export default function Footer() {
   return (

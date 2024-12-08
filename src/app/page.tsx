@@ -4,7 +4,6 @@ import FeaturedProducts from '@/app/components/FeaturedProducts'
 import TopCategories from '@/app/components/TopCategories'
 import ExploreStyles from '@/app/components/ExploreStyles'
 import OurProducts from '@/app/components/OurProducts'
-import TopBanner from '@/app/components/TopBanner'
 import Footer from '@/app/components/Footer'
 import Header from './components/Header'
 

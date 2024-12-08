@@ -1,7 +1,7 @@
 'use client'
 import Image from "next/image"
 import { Heart, Trash2 } from 'lucide-react'
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { MouseEventHandler } from 'react';
 import { useParams } from "next/navigation";
 

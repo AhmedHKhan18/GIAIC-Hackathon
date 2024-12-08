@@ -16,8 +16,8 @@ const partners = [
       <section className="py-12 border-b">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap justify-center items-center gap-8 md:gap-10">
-            {partners.map((partner):any => (
-              <Image src={partner} alt="partners"/>
+            {partners.map((partner, index):any => (
+              <Image src={partner} key={index} alt="partners"/>
             ))}
           </div>
         </div>

@@ -10,10 +10,9 @@ import Img from '@/app/assets/Product-Image.png'
 import { useRouter } from 'next/navigation'
 import { useState, useEffect } from 'react'
 
-export default function ProductPage({ params }:any) {
+export default function ProductPage() {
     const [cart, setCart] = useState<any[]>([]);
     console.log("🚀 ~ ProductPage ~ cart:", cart)
-  const router = useRouter();
   const searchParams = useSearchParams();
   // In a real application, you would fetch the product data based on the slug
   const name = searchParams.get("name"); 

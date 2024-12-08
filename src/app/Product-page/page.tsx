@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import { ShoppingCart } from 'lucide-react'
-import TopBanner from '@/app/components/TopBanner'
 import Header from '@/app/components/Header'
 import Newsletter from '@/app/components/Newsletter'
 import InstagramFeed from '@/app/components/InstagramFeed'

@@ -37,7 +37,6 @@ export default function CartPage() {
 
   const subtotal = cartItems.reduce((total, item) => total + item.price, 0)
   const shipping = "Free"
-  const total = subtotal
 
   return (
     <div>
