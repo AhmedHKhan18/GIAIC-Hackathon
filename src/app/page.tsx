@@ -12,7 +12,7 @@ export default function HomePage() {
     <div className="min-h-screen flex flex-col">
       <Header />
       
-      <main className="flex-grow px-4 sm:px-8 md:px-16 lg:px-32 xl:px-48">
+      <main className="flex-grow px-4 sm:px-8 md:px-16 lg:px-28 xl:px-48">
         <HeroSection />
         <PartnerLogos />
         <div className="container mx-auto px-4">
