@@ -41,7 +41,7 @@ export default function CartPage() {
   return (
     <div>
       <Header />
-      <main className="container mx-auto px-48 py-8">
+      <main className="container mx-auto px-4 sm:px-8 md:px-16 lg:px-28 xl:px-48 py-8">
         <h1 className="text-2xl font-semibold mb-8">Bag</h1>
         <div className="grid md:grid-cols-3 gap-8">
           <div className="md:col-span-2">

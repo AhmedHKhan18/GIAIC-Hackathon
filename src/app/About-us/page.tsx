@@ -8,7 +8,7 @@ export default function AboutPage() {
   return (
     <>
       <Header />
-      <main className="px-48">
+      <main className="px-4 sm:px-8 md:px-16 lg:px-28 xl:px-48">
         <HeroSection />
         <FeaturesSection />
         <ProductsSection />

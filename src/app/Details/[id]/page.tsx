@@ -54,7 +54,7 @@ export default function ProductPage() {
     <div className="min-h-screen flex flex-col">
       <Header />
       
-      <main className="flex-grow container mx-auto px-48 py-8">
+      <main className="flex-grow container mx-auto px-4 sm:px-8 md:px-16 lg:px-28 xl:px-48 py-8">
         <div className="grid md:grid-cols-2 gap-8 mb-16">
           <div className="bg-pink-100 rounded-lg overflow-hidden">
             <Image

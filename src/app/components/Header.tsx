@@ -54,7 +54,7 @@ useEffect(()=>{
           </div>
         </div>
       </nav>
-        <div className='flex justify-center items-center gap-4 sm:gap-8 md:gap-16 lg:gap-28 xl:gap-96 p-4'>
+        <div className='flex justify-center items-center gap-4 sm:gap-8 md:gap-16 lg:gap-32 xl:gap-96 p-4'>
 {/* Navigation Links */}
           <ul className="hidden md:flex space-x-8 font-medium text-gray-700">
             <li><Link href="/" className="hover:text-teal-500">Home</Link></li>
