@@ -4,9 +4,11 @@ import Link from 'next/link';
 import Image from 'next/image';
 import ShoppingCart from '@/app/components/Shopping-cart'
 import { useEffect, useState } from 'react';
+import { Menu, X } from 'lucide-react'
 
 export default function Header() {
     const [cart, setCart] = useState([]);
+    const [isMenuOpen, setIsMenuOpen] = useState(false)
 
 useEffect(()=>{
   const cartData = JSON.parse(localStorage.getItem('cart') || '[]')
@@ -15,13 +17,23 @@ useEffect(()=>{
   }
 },[])
 
+const menuItems = [
+  { name: "Home", href: "/", active: true },
+  { name: "Products Page", href: "/Product-page"},
+  { name: "Cart", href: "/Details/Cart" },
+  { name: "Product Details", href: "/Details" },
+  { name: "Contact Us", href: "/Contact-us" },
+  { name: "About Us", href: "/About-us" },
+  { name: "FAQ", href: "/Faq" },
+]
+
   return (
     <header className="border-b">
       {/* Top Bar */}
       <div className="bg-[#272343] text-white text-sm">
         <div className="container mx-auto px-4 flex justify-between items-center py-2">
           <p>✓ Free Shipping On All Orders Over $50</p>
-          <div className="flex items-center space-x-6">
+          <div className="flex items-center lg:space-x-6 invisible lg:visible">
             <Link href="#" className="hover:underline">Eng</Link>
             <Link href={'Faq'} className="hover:underline">Faqs</Link>
             <Link href="#" className="hover:underline">Need Help</Link>
@@ -51,6 +63,40 @@ useEffect(()=>{
                 3
               </span> */}
             </Link>
+          <button
+          className="lg:hidden text-teal-500"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        >
+          {/* {isMenuOpen ? <X size={24} /> : <Menu size={24} />} */}
+          <Menu size={24} />
+        </button>
+        <ul className={`
+          fixed inset-0 bg-[#fff] flex flex-col items-center justify-center py-10 gap-6
+          transition-all duration-300 ease-in-out w-[100%] lg:hidden z-10
+          ${isMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}
+          `}>
+          <button
+         className="lg:hidden text-teal-500 z-20"
+         onClick={() => setIsMenuOpen(!isMenuOpen)}
+       >
+         <X size={50} /> 
+       </button>
+        {/* <div className='gap-6'> */}
+          {menuItems.map((item) => (
+            <li key={item.name}>
+              <Link
+                href={item.href}
+                className={`text-3xl leading-6 ${
+                  item.active ? "text-teal-500 font-bold" : "text-[#FF9F0D]"
+                } font-inter hover:text-[#FF9F0D] transition-colors`}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {item.name}
+              </Link>
+            </li>
+          ))}
+        {/* </div> */}
+        </ul>
           </div>
         </div>
       </nav>
