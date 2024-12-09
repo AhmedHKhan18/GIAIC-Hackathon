@@ -9,9 +9,9 @@ export default function Header() {
     const [cart, setCart] = useState([]);
 
 useEffect(()=>{
-  const cartData = localStorage.getItem('cart');
+  const cartData = JSON.parse(localStorage.getItem('cart') || '[]')
   if(cartData){
-    setCart(JSON.parse(cartData))
+    setCart(cartData)
   }
 },[])
 
@@ -44,17 +44,17 @@ useEffect(()=>{
 
           {/* Contact and Cart */}
           <div className="flex items-center space-x-6">
-            <Link href="/cart" className="relative">
+            <Link href="/Details/Cart" className="relative">
               {/* <ShoppingCart className="w-6 h-6 text-gray-700" /> */}
               <ShoppingCart cart={cart}/>
-              <span className="absolute -top-2 -right-2 bg-teal-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
+              {/* <span className="absolute -top-2 -right-2 bg-teal-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
                 3
-              </span>
+              </span> */}
             </Link>
           </div>
         </div>
       </nav>
-        <div className='flex justify-center items-center gap-4 sm:gap-8 md:gap-16 lg:gap-40 xl:gap-96 p-4'>
+        <div className='flex justify-center items-center gap-4 sm:gap-8 md:gap-16 lg:gap-44 xl:gap-96 p-4'>
 {/* Navigation Links */}
           <ul className="hidden md:flex space-x-8 font-medium text-gray-700">
             <li><Link href="/" className="hover:text-teal-500">Home</Link></li>
