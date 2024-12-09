@@ -31,7 +31,7 @@ useEffect(()=>{
 
       {/* Main Navigation */}
       <nav className="bg-[#F0F2F3]">
-        <div className="container mx-auto px-44 flex justify-between items-center py-4">
+        <div className="container mx-auto px-4 sm:px-6 md:px-14 lg:px-24 xl:px-44 flex justify-between items-center py-4">
           {/* Logo */}
           <Link href="/" className="text-2xl font-bold text-teal-500 flex items-center">
             <span className="inline-block mr-2">
