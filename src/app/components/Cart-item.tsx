@@ -7,7 +7,7 @@ import { useParams } from "next/navigation";
 
 interface CartItemProps {
   image: string
-  name: string
+  title: string
   color: string
   size: string
   quantity: number
@@ -15,7 +15,7 @@ interface CartItemProps {
 }
 
 
-export function CartItem({ image, name, color, size, quantity, price }: CartItemProps) {
+export function CartItem({ image, title, color, size, quantity, price }: CartItemProps) {
     const [cart, setCart] = useState<any[]>([]);
     const id = useParams()
 
@@ -30,7 +30,7 @@ export function CartItem({ image, name, color, size, quantity, price }: CartItem
     <div className="flex items-start space-x-4 py-6 border-b">
       <Image
         src={image}
-        alt={name}
+        alt={title}
         width={120}
         height={120}
         className="rounded-lg object-cover"
@@ -38,7 +38,7 @@ export function CartItem({ image, name, color, size, quantity, price }: CartItem
       <div className="flex-1">
         <div className="flex justify-between">
           <div>
-            <h3 className="font-medium">{name}</h3>
+            <h3 className="font-medium">{title}</h3>
             <p className="text-sm text-gray-500">{color}</p>
           </div>
           <p className="text-sm">MRP: ${price}</p>

@@ -1,0 +1,12 @@
+Test Case ID,Test Case Description,Test Steps,Expected Result,Actual Result,Status,Severity Level,Assigned To,Remarks
+TC001,Verify user login with valid credentials,"1. Open app
+2. Navigate to login
+3. Enter valid credentials
+4. Click login",User is successfully logged in and redirected to the dashboard,User successfully logged in,Passed,High,Ahmed Hassan Khan,No issues found
+TC002,Check error message for invalid login,"1. Open app
+2. Navigate to login
+3. Enter invalid credentials
+4. Click login",Error message 'Invalid username or password' is displayed,Error message displayed as expected,Passed,Medium,Ahmed Hassan Khan,Error handled correctly
+TC003,Test multi-language support for the homepage,"1. Open app
+2. Select language option
+3. Verify text changes",Content updates to the selected language without layout issues,"Language switched successfully, minor alignment issue",Failed,Low,UI Developer,Alignment issue in the header section

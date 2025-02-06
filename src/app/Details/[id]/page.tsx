@@ -15,12 +15,12 @@ export default function ProductPage() {
     console.log("🚀 ~ ProductPage ~ cart:", cart)
   const searchParams = useSearchParams();
   // In a real application, you would fetch the product data based on the slug
-  const name = searchParams.get("name"); 
+  const title = searchParams.get("title"); 
   const price = searchParams.get("price");
   const image = decodeURIComponent(searchParams.get('image') || '');
   const id = searchParams.get("id");
   const product = {
-    name: name || 'Unknown',
+    title: title || 'Unknown',
     price: price || 40,
     image: image || Img,
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tincidunt erat enim. Lorem ipsum dolor sit amet, consectetur adipiscing'
@@ -59,14 +59,14 @@ export default function ProductPage() {
           <div className="bg-pink-100 rounded-lg overflow-hidden">
             <Image
               src={product.image}
-              alt={product.name}
+              alt={product.title}
               width={600}
               height={600}
               className="w-full h-auto"
             />
           </div>
           <div className="flex flex-col justify-center">
-            <h1 className="text-6xl font-bold mb-4">{product.name}</h1>
+            <h1 className="text-6xl font-bold mb-4">{product.title}</h1>
             <div className="bg-teal-500 text-white font-semibold py-1 px-3 rounded-full inline-block w-28 mb-4">
               ${product.price} USD
             </div>
